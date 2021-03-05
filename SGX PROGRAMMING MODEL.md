@@ -20,7 +20,7 @@ The PRM is a micro-architectural detail that might change in future implementati
 
 Enclave data is stored into the EPC, which is a subset of the PRM. The PRM is a contiguous range of DRAM that cannot be accessed by system software or peripherals.
 
-<img src="/Users/emisonlu/Library/Application Support/typora-user-images/截屏2021-03-04 下午12.44.57.png" alt="截屏2021-03-04 下午12.44.57" style="zoom:50%;" />
+<img src="https://github.com/EmisonLu/SGX_Notes/raw/main/image/img1.png" alt="image" style="zoom:30%;" />
 
 The SGX design supports having multiple enclaves on a system at the same time, which is a necessity in multi-process environments. This is achieved by having the EPC split into 4 KB pages that can be assigned to different enclaves.
 
@@ -38,7 +38,7 @@ The EPCM’s contents is only used by SGX’s security checks. Under normal oper
 
 The EPCM uses the information in Table below to track the ownership of each EPC page.
 
-<img src="/Users/emisonlu/Library/Application Support/typora-user-images/截屏2021-03-04 下午1.20.51.png" alt="截屏2021-03-04 下午1.20.51" style="zoom:35%;" />
+<img src="https://github.com/EmisonLu/SGX_Notes/raw/main/image/img2.png" alt="image" style="zoom:30%;" />
 
 The SGX instructions that allocate an EPC page set the VALID bit of the corresponding EPCM entry to 1.
 
